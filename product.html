@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/3a3ad33343.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./global.css">
+</head>
+<body>  
+  
+  <nav class="navbar navbar-expand-lg bg-light py-3 px-5 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-4 text-acc" href="#">Presto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-acc"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="./products.html">Annunci</a>
+          </li>
+          <li class="nav-item mx-3 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="btn btn-outline-danger">
+          Carica il tuo annuncio
+          <i class="fa-solid fa-square-plus"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="container my-5 py-5">
+    <div class="row my-5 py-5 align-items-center">
+      <div class="col-12 col-md-6">
+        <p id="title" class="h1"></p>
+        <p id="description" class="mt-5 lead"></p>
+        <p class="lead">Categoria prodotto: <strong id="category"></strong></p>
+        <p class="lead">Prezzo: <strong id="price"></strong></p>
+        <p class="lead">Rating score: <strong id="score"></strong></p>
+        <p class="lead">Recensioni ottenute: <strong id="reviews"></strong></p>
+        <div class="mt-5">
+          <button class="btn-cart border-0 rounded-2">Contatta il venditore</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <img id="image" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" width="400" class="d-block mx-auto" alt="">
+      </div>
+    </div>
+  </header>
+
+  
+
+  <footer class="container-fluid bg-sec">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md 4">
+          <a class="navbar-brand fw-bold fs-4 text-acc" href="#">Presto</a>
+          <p class="mt-4 fw-bold">Contact us</p>
+          <div class="d-flex mb-3">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div class="ms-3">
+              <p class="small m-0 p-0">Whats App</p>
+              <p class="small m-0 p-0">+999 333 222</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fa-solid fa-phone"></i>
+            <div class="ms-3">
+              <p class="small m-0 p-0">Call us</p>
+              <p class="small m-0 p-0">+999 333 222</p>
+            </div>
+          </div>
+          <img src="./media/googlePlay.png" width="200" alt="">
+        </div>
+        <div class="col-12 col-md 4">
+          <p class="fw-bold">Most popular categories</p>
+          <hr>
+          <ul>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md 4">
+          <p class="fw-bold">Customer Servicies</p>
+          <hr>
+          <ul>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    // come catturo parametro dall URL in js
+    let params = new URLSearchParams(document.location.search); 
+    let product_id = params.get('product_id');
+    
+    fetch(`https://fakestoreapi.com/products/${product_id}`)
+    .then(response => response.json())
+    .then(product => {
+
+      console.log(product);
+      
+      const title = document.querySelector('#title');
+      const description = document.querySelector('#description');
+      const price = document.querySelector('#price');
+      const score = document.querySelector('#score');
+      const image = document.querySelector('#image');  
+      const reviews = document.querySelector('#reviews');  
+      const category = document.querySelector('#category'); 
+
+      title.textContent = product.title; 
+      description.textContent = product.description; 
+      price.textContent = product.price + ' $'; 
+      score.textContent = product.rating.rate + ' / 5'; 
+      image.src = product.image; 
+      reviews.textContent = product.rating.count; 
+      category.textContent = product.category; 
+
+      // fetch la risorsa ottieni categoria passando come argomento la categoria del prodotto mostrato 
+      
+  })
+
+    
+  </script>
+</body>
+</html>

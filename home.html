@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/3a3ad33343.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./global.css">
+</head>
+<body>  
+  
+  <nav class="navbar navbar-expand-lg bg-light py-3 px-5 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-4 text-acc" href="#">Presto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-acc"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="./products.html">Annunci</a>
+          </li>
+          <li class="nav-item mx-3 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="btn btn-outline-danger">
+          Carica il tuo annuncio
+          <i class="fa-solid fa-square-plus"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="container vh-100 d-flex align-items-center">
+    <div class="row h-100 align-items-center mainRow">
+      <div class="col-12 col-md-6 order-last order-md-first" data-aos="fade-up">
+        <h1 class="display-3">Find the <strong>best</strong> <br> article <strong>for you</strong></h1>
+        <p>itaque cum adipisci laborum, <br> neque cumque inventore rerum, excepturi molestiae laudantium? <br> Praesentium sunt non ex?</p>
+        <button class="btn bg-acc px-4 py-3 mt-5">
+          <a href="./products.html" class="text-decoration-none text-white">Visit all</a>
+        </button>
+      </div>
+      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <img src="./media/img1.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </main>
+  
+  <div id="categories" class="container-fluid py-3">
+    <div class="row mb-5 mt-4">
+      <div class="col-12 text-center" data-aos="fade-up">
+        <p class="h3">Tra quali categorie puoi cercare i tuoi articoli</p>
+      </div>
+    </div>
+    <div id="categoryRenderElememt" class="row mb-5" data-aos="zoom-in" data-aos-delay="300">
+      <!-- qui ci sono le categorie generate dai dati in ingresso -->
+    </div>
+  </div>
+  
+  <div class="container my-5 py-5">
+    <div class="row mb-5">
+      <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="500">
+        <p class="h1">Must have</p>
+      </div>
+    </div>
+    <div id="mustHave" class="row mb-5" data-aos="zoom-in" data-aos-delay="500">
+    </div>
+  </div>
+
+
+  <div class="container my-5 py-5">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <p class="h2">Happy reviews users</p>
+      </div>  
+    </div>
+    <div class="row mb-5">
+      <div class="col-12 py-3">  
+        <!-- Swiper -->
+        <div class="swiper mySwiper p-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card bg-transparent shadow border-0 w-75 p-3">
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                <div class="d-flex justify-content-around">
+                  <div class="avatar"></div>
+                  <div>
+                    <p class="m-0 p-0 small">Mario Rossi</p>
+                    <p class="m-0 p-0">⭐️⭐️⭐️⭐️⭐️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-transparent shadow border-0 w-75 p-3">
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                <div class="d-flex justify-content-around">
+                  <div class="avatar"></div>
+                  <div>
+                    <p class="m-0 p-0 small">Mario Rossi</p>
+                    <p class="m-0 p-0">⭐️⭐️⭐️⭐️⭐️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-transparent shadow border-0 w-75 p-3">
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                <div class="d-flex justify-content-around">
+                  <div class="avatar"></div>
+                  <div>
+                    <p class="m-0 p-0 small">Mario Rossi</p>
+                    <p class="m-0 p-0">⭐️⭐️⭐️⭐️⭐️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-transparent shadow border-0 w-75 p-3">
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                <div class="d-flex justify-content-around">
+                  <div class="avatar"></div>
+                  <div>
+                    <p class="m-0 p-0 small">Mario Rossi</p>
+                    <p class="m-0 p-0">⭐️⭐️⭐️⭐️⭐️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-transparent shadow border-0 w-75 p-3">
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                <div class="d-flex justify-content-around">
+                  <div class="avatar"></div>
+                  <div>
+                    <p class="m-0 p-0 small">Mario Rossi</p>
+                    <p class="m-0 p-0">⭐️⭐️⭐️⭐️⭐️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-transparent shadow border-0 w-75 p-3">
+                <p class="fst-italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                <div class="d-flex justify-content-around">
+                  <div class="avatar"></div>
+                  <div>
+                    <p class="m-0 p-0 small">Mario Rossi</p>
+                    <p class="m-0 p-0">⭐️⭐️⭐️⭐️⭐️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <footer class="container-fluid bg-sec">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md 4">
+          <a class="navbar-brand fw-bold fs-4 text-acc" href="#">Presto</a>
+          <p class="mt-4 fw-bold">Contact us</p>
+          <div class="d-flex mb-3">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div class="ms-3">
+              <p class="small m-0 p-0">Whats App</p>
+              <p class="small m-0 p-0">+999 333 222</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fa-solid fa-phone"></i>
+            <div class="ms-3">
+              <p class="small m-0 p-0">Call us</p>
+              <p class="small m-0 p-0">+999 333 222</p>
+            </div>
+          </div>
+          <img src="./media/googlePlay.png" width="200" alt="">
+        </div>
+        <div class="col-12 col-md 4">
+          <p class="fw-bold">Most popular categories</p>
+          <hr>
+          <ul>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+            <li class="mb-3 small">lorem category</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md 4">
+          <p class="fw-bold">Customer Servicies</p>
+          <hr>
+          <ul>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+            <li class="mb-3 small">lorem service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+
+    let swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }
+    });
+    
+    fetch('https://fakestoreapi.com/products')
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      console.log(data);
+      
+      // mi servono le categorie per stamparle 
+      // per trovare quelle presenti devo andare a pescarle dai miei dati
+      
+      // prendi tutti i valori della prop category da ogni oggetto prodotto 
+      
+      // salva le categorie presenti un array di appoggio categorie 
+      
+      let categories = [];
+      
+      for (let i = 0; i < data.length; i++) {
+        const prodotto = data[i];
+        const categoria = prodotto.category
+        categories.push(categoria)
+      }
+      // una volta pescate tutte le categorie, se sono presenti doppioni, eliminarli
+      // METODO FUNZIONALE PER OTTERENE LE CATEGORIE
+      let finalCategories = Array.from(new Set(categories)); 
+      // console.log(finalCategories);
+      // METODO PROCEDURALE PER OTTERENERE LE CATEGORIE 
+      // array finale di appoggio senza ripetizioni 
+      // let finalCategories = []; 
+      // // ciclo su categories 
+      // for (let i = 0; i < categories.length; i++) {
+        //   const category = categories[i];
+        //   // controllo che non ci sia la categoria nel array finale di appoggio senza ripetizioni 
+        //   // se true
+        //     // push categoria in array finale 
+        //   if (!finalCategories.includes(category)) {
+          //     finalCategories.push(category)
+          //   }
+          //   // skkippa 
+          // }
+          // // ritorna array con categorie senza duplicati 
+          // console.log(finalCategories);
+          
+          // mostrare il risultato nel dom 
+          
+          const categoryRenderElememt = document.querySelector('#categoryRenderElememt')
+          
+          finalCategories.forEach(category => {
+            let div = document.createElement('div')
+            div.classList.add('col-12','col-md-3','mb-3')
+            div.innerHTML = `
+            <div class="card border-0 shadow-sm text-center w-75 mx-auto">
+              <div class="card-body align-middle">
+                <p class="p-0 m-0">Visit now 👆🏻</p>
+                <a class="text-decoration-none text-reset fw-bold fst-italic" href="./category.html?category=${category}">${category}</a>
+              </div>
+            </div>
+            `
+            categoryRenderElememt.appendChild(div)
+          })
+          
+          const mustHave = document.querySelector('#mustHave'); 
+          // la sezione must have deve popolarsi con i primi 3 prodotti con il rate piu alto di tutti 
+          // task
+          // prendere i primi 3 articoli con il rate piu alto
+          const dataCopy = data.slice(); 
+          const rateSorted = dataCopy.sort((a, b) => b.rating.rate - a.rating.rate).slice(0,3);
+          rateSorted.forEach(prod => {
+            let div = document.createElement('div'); 
+            div.classList.add('col-12', 'col-md-4', 'mb-3'); 
+            div.innerHTML = `
+              <div class="card border-0 rounded-3 p-3 d-block mx-auto h-100" style="width: 18rem;">
+                <div class="card-body h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <img src="${prod.image}" width="150" class="d-block mx-auto" alt="img-product">
+                    <h5 class="card-title fw-bolder mt-3">${prod.title}</h5>
+                  </div>
+                  <div>
+                    <p class="card-text fw-bold">${prod.price}$</p>
+                    <a href="#" class="btn-cart text-decoration-none shadow rounded-2">
+                      Add to cart
+                      <i class="fa-solid fa-bag-shopping" style="color: #ecf1f2;"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ` 
+            mustHave.appendChild(div)
+
+
+          })
+          
+
+          
+        });       
+      </script>
+    </body>
+    </html>
